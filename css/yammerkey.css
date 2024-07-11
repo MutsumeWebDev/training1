@@ -1,10 +1,22 @@
+@charset "utf-8";
+
 html{
-    --theme_color: #18EBF9
+    --theme_color: #18EBF9;
+    font-family:sans-serif;
+    background-image: url(/images/favicon.png);
+    background-size: 100px auto;
+    background-repeat: space;
 }
-header{
+
+header,footer{
     background-color:var(--theme_color);
     padding: 10px;
     text-align: center;
+}
+
+main{
+    background-color: #FFFFFFEE;
+    padding: 5px 0;
 }
 
 h1{
@@ -14,38 +26,77 @@ h1{
 
 h2{
     font-size: 30px;
+    text-align: center;
+    border-bottom: 5px solid;
+    font-weight: bold;
+    margin: 10px 0;
     color: var(--theme_color);
-    border-left: 5px solid var(--theme_color);
-    padding-left: 5px;
 }
 
 h3{
+    font-size: 27px;
+    color: var(--theme_color);
+    border-left: 5px solid var(--theme_color);
+    padding-left: 5px;
+    margin: 8px 0;
+}
+
+h4{
     color: var(--theme_color);
     font-size: 25px;
     margin: 5px 0px;
 }
 
-main{
-    padding: 10px;
+#mainContents{
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 640px;
 }
 
 p,li{
     font-size: 20px;
-    margin: 10px 0px    
+}
+
+p,#kakerudo{
+    line-height: 2;
+    margin: 10px 0px;
+}
+
+p>a{
+    text-decoration: underline;
+}
+
+a:hover{
+    color: var(--theme_color);
 }
 
 li{
     list-style-position: inside;
 }
 
-ul>li{
-    list-style-type: circle;
+.bushoList>li{
+    list-style-type: circle; 
+    padding-left: 10px;
 }
 
-ol>li{
-    list-style-type: decimal;
+#kakerudo{
+    overflow: auto;
+}
+
+#kakerudo>li{
+    float: left;
+    width: 10%;
+    text-align: center;
+}
+
+#kakerudoMe{
+    background-color: var(--theme_color);
+    color: white;
+    font-weight: bold;
+}
+
+#ranking>li{
+    list-style-type: decimal; 
+    padding-left: 10px;
 }
 
 .shocho{
