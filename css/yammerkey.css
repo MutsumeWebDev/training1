@@ -3,28 +3,75 @@
 html{
     --theme_color: #18EBF9;
     font-family:sans-serif;
+}
+
+body{
     background-image: url(/images/favicon.png);
     background-size: 100px auto;
     background-repeat: space;
-}
-
-header,footer{
-    background-color:var(--theme_color);
-    padding: 10px;
-    text-align: center;
+    background-color: #FFFE;
+    background-blend-mode:lighten;
 }
 
 main{
-    background-color: #FFFFFFEE;
-    padding: 5px 0;
+    padding: 5px 20px;
+    overflow: auto;
 }
 
-h1{
-    font-size: 40px;
-    color: white;
+hr{
+    border-color: var(--theme_color);
+    border-width: thin;
+    border-style: dashed;
 }
 
-h2{
+#contents{
+    width: 75%;
+}
+
+#contents>div{
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+nav{
+    width: 25%;
+}
+
+#contents,nav{
+    float: left;
+    padding: 5px;
+}
+
+a{
+    text-decoration: underline;
+}
+
+p,li{
+    font-size: 20px;
+}
+
+li{
+    list-style-position: inside;
+}
+
+p,#kakerudo{
+    line-height: 2;
+    margin: 10px 0px;
+}
+
+a:hover{
+    color: var(--theme_color);
+}
+
+/*メインコンテンツ*/
+main>h2{    
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--theme_color);
+}
+
+#contents h1{
     font-size: 30px;
     text-align: center;
     border-bottom: 5px solid;
@@ -33,7 +80,7 @@ h2{
     color: var(--theme_color);
 }
 
-h3{
+#contents h2{
     font-size: 27px;
     color: var(--theme_color);
     border-left: 5px solid var(--theme_color);
@@ -41,48 +88,48 @@ h3{
     margin: 8px 0;
 }
 
-h4{
+#contents h3{
     color: var(--theme_color);
     font-size: 25px;
     margin: 5px 0px;
 }
 
-#mainContents{
-    margin: 0 auto;
-    max-width: 640px;
-}
-
-p,li{
-    font-size: 20px;
-}
-
-p,#kakerudo{
-    line-height: 2;
-    margin: 10px 0px;
-}
-
-p>a{
-    text-decoration: underline;
-}
-
-a:hover{
-    color: var(--theme_color);
-}
-
-li{
-    list-style-position: inside;
-}
-
-.bushoList>li{
+.bushoList li{
     list-style-type: circle; 
     padding-left: 10px;
+}
+
+.shocho{
+    color: var(--theme_color);
+    font-weight: bold;
+}
+
+.contentsList{
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    margin: 10px;
+    height: 352px;
+}
+
+.iframeContents{
+    float: left;
+}
+
+iframe,img{
+    flex-shrink:0;
+    margin: 10px 10px 10px 0;
+}
+
+iframe:last-child,img:last-child{
+    margin-right: 0;
 }
 
 #kakerudo{
     overflow: auto;
 }
 
-#kakerudo>li{
+#kakerudo li{
     float: left;
     width: 10%;
     text-align: center;
@@ -94,18 +141,28 @@ li{
     font-weight: bold;
 }
 
-#ranking>li{
+#rank_title{
+    text-align: center;
+    font-weight: bold;
+    color: var(--theme_color);
+}
+
+#rankList li{
     list-style-type: decimal; 
     padding-left: 10px;
 }
 
-.shocho{
-    color: var(--theme_color);
+/*目次*/
+#mokuji h1{
+    font-size: 25px;
     font-weight: bold;
+    color: var(--theme_color);
 }
 
-.strong{
-    color: red;
-    font-size: 25px;
-    text-emphasis: filled;
+#mokuji li{
+    list-style-type: ">";
+}
+
+#mokuji li::marker{
+    font-size: 80%;
 }
