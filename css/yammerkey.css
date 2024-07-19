@@ -1,5 +1,37 @@
 @charset "utf-8";
 
+/*PC*/
+@media all and (min-width:1000px) {
+    nav{
+        width: 25%;
+    }
+
+    #contents{
+        width: 75%;
+    }
+}
+
+/*スマートフォン*/
+@media all and (max-width:1000px) {
+    main>div{    
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    nav{
+        width: 100%;
+    }
+
+    #contents{
+        width: 100%;
+    }
+
+    #mokuji{
+        margin: 0 auto;
+        max-width: 800px;
+    }
+}
+
 html{
     --theme_color: #18EBF9;
     font-family:sans-serif;
@@ -24,17 +56,9 @@ hr{
     border-style: dashed;
 }
 
-#contents{
-    width: 75%;
-}
-
 #contents>div{
     margin: 0 auto;
     max-width: 800px;
-}
-
-nav{
-    width: 25%;
 }
 
 #contents,nav{
@@ -44,6 +68,7 @@ nav{
 
 a{
     text-decoration: underline;
+    color: black;
 }
 
 p,li{
@@ -61,6 +86,14 @@ p,#kakerudo{
 
 a:hover{
     color: var(--theme_color);
+}
+
+main h1,h2,h3,h4,ol,ul{
+    margin: 0;
+}
+
+ol,ul{
+    padding: 0;
 }
 
 /*メインコンテンツ*/
@@ -133,6 +166,7 @@ iframe:last-child,img:last-child{
     float: left;
     width: 10%;
     text-align: center;
+    list-style: none;
 }
 
 #kakerudoMe{
